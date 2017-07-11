@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Books | Home🏠</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./assets/Images/book_logo.png" alt="">
+        <h1>Books</h1>
+      </nav>
+    </header>
+
+    <section class="books-render">
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="./assets/JS/shared.js"></script>
+    <script src="./assets/JS/app.js"></script>
+
+    <script id="books-template" type="text/x-handlebars-template">
+
+      <div class="row">
+        {{#each books}}
+            <h2>{{title}}</h2>
+            <img src='{{cover_url}}'></img>
+            <h3>{{genre}}</h2>
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <div class="caption">
+                  {{description}}
+                </div>
+              </div>
+            </div>
+        {{/each}}
+      </div>
+
+   </script>
+
+  </body>
+</html>

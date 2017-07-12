@@ -19,9 +19,11 @@ $(document).ready(() => {
     if (!valid(data)) {
       alert('invalid entry');
     } else {
-      $.post(`${API_URL}/authors/new`, data).then(response => {
-        console.log(response);
+      $.post(`${API_URL}/authors/new`, data)
+        .then((result) => {
+          console.log(result);
       });
+      window.location.href = '../authors.html';
     }
 
     function valid() {

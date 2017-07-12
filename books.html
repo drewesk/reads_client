@@ -22,8 +22,8 @@
           <img class="brand-logo center" src="./assets/Images/book_logo.png" alt="">
           <ul class="left hide-on-med-and-down">
             <li><a href="./index.html">Home</a></li>
-            <li class="active"><a href="#">books</a></li>
-            <li><a href="./authors.html">authors</a></li>
+            <li class="active"><a href="#">Books</a></li>
+            <li><a href="./authors.html">Authors</a></li>
             <li><a href="./books/new.html">Add Book</a></li>
           </ul>
         </div>
@@ -45,19 +45,22 @@
 
       <div class="col s12 m7">
         {{#each books}}
-        <h2 class="header">{{title}}</h2>
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="{{cover_url}}" alt="Book-Stack" Height="190" width="100">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <p>{{description}}</p>
+        <div class="wrap-{{id}}">
+          <h2 class="header">{{title}}</h2>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="{{cover_url}}" alt="Book-Stack" Height="190" width="100">
             </div>
-            <div class="card-action">
-              <h3>{{genre}}</h2>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>{{description}}</p>
+              </div>
+              <div class="card-action">
+                <h3>{{genre}}</h3>
+              </div>
             </div>
           </div>
+          <a class="waves-effect waves-light btn removebtn" data-id="{{id}}">x</a>
         </div>
         {{/each}}
       </div>

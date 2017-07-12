@@ -16,12 +16,13 @@ $(document).ready(() => {
       "cover_url": $cover
     }
 
-    if (data) {
-    //   alert('invalid entry');
-    // } else {
+    if (!valid(data)) {
+      alert('invalid entry');
+    } else {
       $.post(`${API_URL}/books/new`, data).then(response => {
         console.log(response);
       });
+      window.location.href = '../books.html';
     }
 
     function valid() {

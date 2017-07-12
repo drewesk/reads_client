@@ -7,6 +7,9 @@ $.ajaxSetup({
 
 const API_URL = (window.location.hostname == "localhost") ? `http://localhost:3000`: `https://reads-server.herokuapp.com`;
 
+// $('.removebtn').click(() => {
+//   $(this).parent().hide();
+// });
 /////////////////////////////////////////////
 
 // const addAuthors = addEntity(getAuthors(), '#authors-template', '.authors-render');

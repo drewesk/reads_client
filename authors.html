@@ -23,8 +23,8 @@
           <img class="brand-logo center" src="./assets/Images/book_logo.png" alt="">
           <ul class="left hide-on-med-and-down">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./books.html">books</a></li>
-            <li class="active"><a href="#">authors</a></li>
+            <li><a href="./books.html">Books</a></li>
+            <li class="active"><a href="#">Authors</a></li>
             <li><a href="authors/new.html">Add Author</a></li>
           </ul>
         </div>
@@ -46,16 +46,19 @@
 
       <div class="col s12 m7">
         {{#each authors}}
-        <h2 class="header">{{first_name}} {{last_name}}</h2>
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="{{portrait_url}}" alt="Book-Stack" Height="190" width="100">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <p>{{biography}}</p>
+        <div class="wrap-{{id}}">
+          <h2 class="header">{{first_name}} {{last_name}}</h2>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="{{portrait_url}}" alt="Book-Stack" Height="190" width="100">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>{{biography}}</p>
+              </div>
             </div>
           </div>
+          <a class="waves-effect waves-light btn removebtn" data-id="{{id}}">x</a>
         </div>
         {{/each}}
       </div>

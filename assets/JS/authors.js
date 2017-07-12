@@ -1,6 +1,19 @@
 $(document).ready(() => {
   getAuthors()
-  .then(addAuthors);
+  .then(addAuthors)
+  .then(() => {
+
+    $('.removebtn').click(function () {
+      const ID = $(this).data().id;
+      $.ajax({
+        "url": `${API_URL}/authors/${ID}/delete`,
+        "method": "DELETE"
+    	}).then(() => {
+        $(`.wrap-${ID}`).remove();
+        console.log('deleted');
+    	});
+    });
+  });
 });
 
 function getAuthors () {
@@ -12,6 +25,6 @@ function addAuthors (authors) {
   const template = Handlebars.compile(source);
   const Authors = {authors};
   const HTML = template(Authors);
-  console.log(HTML);
+  // console.log(HTML);
   $('.authors-render').html(HTML);
 }

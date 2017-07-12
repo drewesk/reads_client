@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Authors | Home🏠</title>
+
+    <link rel="shortcut icon" href="assets/Images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/CSS/app.css">
+
+    <!-- materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+  </head>
+
+  <body>
+    <main>
+
+      <header>
+        <nav>
+          <div class="nav-wrapper #1976d2 blue darken-2">
+            <img class="brand-logo center" src="../assets/Images/book_logo.png" alt="">
+            <ul class="left hide-on-med-and-down">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../books.html">Books</a></li>
+              <li><a href="../authors.html">Authors</a></li>
+              <li class="active"><a href="#">New Book</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="row">
+        <form class="col s12">
+
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Python for Dummies" id="title" type="text">
+              <label for="title">Title</label>
+            </div>
+
+            <div class="input-field col s6">
+              <input placeholder="Python" id="genre" type="text">
+              <label for="genre">Genre</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="...About Book" id="description" type="text">
+              <label for="description">Description</label>
+            </div>
+          </div>
+
+            <div class="input-field col s6">
+              <input placeholder="https://www.example.com/cover.jpg" id="cover_url" type="text">
+              <label for="cover_url">Cover URL</label>
+            </div>
+          </div>
+
+          <button class="btn waves-effect waves-light createBook" type="submit">Create
+            <i class="material-icons right">playlist_add</i>
+          </button>
+
+        </form>
+      </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../assets/JS/shared.js"></script>
+    <script src="../assets/JS/new_book.js"></script>
+  </body>
+</html>

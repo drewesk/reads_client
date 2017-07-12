@@ -3,17 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Reads | Home🏠</title>
+
+    <link rel="stylesheet" href="assets/CSS/app.css">
+
+    <!-- materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <!-- materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
   </head>
   <body>
     <header>
+
       <nav>
-        <img src="./assets/Images/book_logo.png" alt="">
-        <h1>Reads</h1>
-        <a href="./author.html"><img src="http://images.clipartpanda.com/stack-of-books-clipart-ncXEo7pcB.jpeg" alt="Book-Stack" Height="400" width="200"></a>
-        <h2>Authors</h2>
-        <a href="./books.html"><img src="https://s-media-cache-ak0.pinimg.com/736x/45/58/dd/4558ddfb8e841c2140c5948acb77622a--handwriting-analysis-hand-writing.jpg" alt="Author" Height="400" width="200"></a>
-        <h2>Books</h2>
+        <div class="nav-wrapper #1976d2 blue darken-2">
+          <img class="brand-logo center" src="./assets/Images/book_logo.png" alt="">
+          <ul class="left hide-on-med-and-down">
+            <li><a class="active" href="#">Home</a></li>
+          </ul>
+        </div>
       </nav>
+
+      <main>
+
+        <div class="col s12 m7">
+          <h2 class="header">Books</h2>
+          <div class="card horizontal">
+            <div class="card-image">
+              <a href="./books.html"><img src="https://s-media-cache-ak0.pinimg.com/736x/45/58/dd/4558ddfb8e841c2140c5948acb77622a--handwriting-analysis-hand-writing.jpg" alt="Author" Height="190" width="100"></a>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Biltong salami turkey pork chop sausage. Andouille ball tip t-bone pastrami, chicken short ribs strip steak corned beef.</p>
+              </div>
+              <div class="card-action">
+                <a href="./books.html">Click Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m7">
+          <h2 class="header">Authors</h2>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="http://images.clipartpanda.com/stack-of-books-clipart-ncXEo7pcB.jpeg" alt="Book-Stack" Height="190" width="100">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Biltong salami turkey pork chop sausage. Andouille ball tip t-bone pastrami, chicken short ribs strip steak corned beef.</p>
+              </div>
+              <div class="card-action">
+                <a href="./authors.html">Click Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </main>
+
     </header>
 
   </body>

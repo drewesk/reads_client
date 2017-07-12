@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Books | Home🏠</title>
+    <title>Authors | Home🏠</title>
 
     <link rel="stylesheet" href="assets/CSS/app.css">
 
@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
   </head>
+
   <body>
 
     <header>
@@ -21,15 +22,15 @@
           <img class="brand-logo center" src="./assets/Images/book_logo.png" alt="">
           <ul class="left hide-on-med-and-down">
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="#">books</a></li>
-            <li><a href="authors.html">authors</a></li>
+            <li><a href="books.html">books</a></li>
+            <li class="active"><a href="#">authors</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="books-render">
+      <section class="authors-render">
 
       </section>
     </main>
@@ -37,23 +38,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="./assets/JS/shared.js"></script>
-    <script src="./assets/JS/books.js"></script>
+    <script src="./assets/JS/authors.js"></script>
 
-    <script id="books-template" type="text/x-handlebars-template">
+    <script id="authors-template" type="text/x-handlebars-template">
 
       <div class="col s12 m7">
-        {{#each books}}
-        <h2 class="header">{{title}}</h2>
+        {{#each authors}}
+        <h2 class="header">{{first_name}} {{last_name}}</h2>
         <div class="card horizontal">
           <div class="card-image">
-            <img src="{{cover_url}}" alt="Book-Stack" Height="190" width="100">
+            <img src="{{portrait_url}}" alt="Book-Stack" Height="190" width="100">
           </div>
           <div class="card-stacked">
             <div class="card-content">
-              <p>{{description}}</p>
-            </div>
-            <div class="card-action">
-              <h3>{{genre}}</h2>
+              <p>{{biography}}</p>
             </div>
           </div>
         </div>

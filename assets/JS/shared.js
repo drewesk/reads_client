@@ -23,32 +23,6 @@ const API_URL = 'https://reads-server.herokuapp.com';
 // }
 /////////////////////////////////////////////
 
-function getAuthors () {
-  return $.get(`${API_URL}/authors`);
-}
-
-function getBooks () {
-  return $.get(`${API_URL}/books`);
-}
-
-function addAuthors (authors) {
-  const source = $('#authors-template').html();
-  const template = Handlebars.compile(source);
-  const Authors = {authors};
-  const HTML = template(Authors);
-  console.log(HTML);
-  $('.authors-render').html(HTML);
-}
-
-function addBooks (books) {
-  const source = $('#books-template').html();
-  const template = Handlebars.compile(source);
-  const Books = {books};
-  const HTML = template(Books);
-  console.log(HTML);
-  $('.books-render').html(HTML);
-}
-
 /////////////////////////////////////////////
 
 // function getEntity(path) {

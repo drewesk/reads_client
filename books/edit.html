@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
-    <title>Authors | Home🏠</title>
+    <title>Books | Home🏠</title>
 
     <link rel="shortcut icon" href="assets/Images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/CSS/app.css">
@@ -9,8 +9,6 @@
     <!-- materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
   </head>
 
@@ -25,41 +23,49 @@
               <li><a href="../index.html">Home</a></li>
               <li><a href="../books.html">Books</a></li>
               <li><a href="../authors.html">Authors</a></li>
-              <li class="active"><a href="#">Edit Author</a></li>
+              <li><a href="./new.html">New Book</a></li>
+              <li class="active"><a href="#">Edit Book</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
+      <div class="card input-field inline">
+        <input id="searchBookID" type="number" class="validate">
+        <label for="email" data-error="wrong Type, must be an ID" data-success="Click Search">Book ID</label>
+      </div>
+
+      <a id='bookUpdateSearch' class="waves-effect waves-light btn">Search</a>
+
       <div class="row">
-        <form class="col s12">
+        <form id="submitBook" class="col s12">
 
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="John" id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
+              <input placeholder="" id="title" type="text">
+              <label for="title">Title</label>
             </div>
 
             <div class="input-field col s6">
-              <input placeholder="Doe" id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
+              <input placeholder="" id="genre" type="text">
+              <label for="genre">Genre</label>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="...About Me" id="biography" type="text" class="validate">
-              <label for="biography">Biography</label>
+              <input placeholder="" id="description" type="text">
+              <label for="description">Description</label>
             </div>
           </div>
 
             <div class="input-field col s6">
-              <input placeholder="https://www.example.com/portrait.jpg" id="portrait_url" type="text" class="validate">
-              <label for="portrait_url">Portrait URL</label>
+              <input placeholder="" id="cover_url" type="text">
+              <label for="cover_url">Cover URL</label>
             </div>
           </div>
 
-          <button class="btn waves-effect waves-light createAuthor" type="submit">Create
+          <button class="btn waves-effect waves-light" id="update-book" type="submit">Update
             <i class="material-icons right">playlist_add</i>
           </button>
 
@@ -67,9 +73,10 @@
       </div>
 
     </main>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <script src="../assets/JS/shared.js"></script>
-    <script src="../assets/JS/new_author.js"></script>
+    <script src="../assets/JS/edit_books.js"></script>
+
   </body>
 </html>

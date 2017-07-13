@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-
   </head>
 
   <body>
@@ -25,14 +23,22 @@
               <li><a href="../index.html">Home</a></li>
               <li><a href="../books.html">Books</a></li>
               <li><a href="../authors.html">Authors</a></li>
+              <li><a href="./new.html">New author</a></li>
               <li class="active"><a href="#">Edit Author</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
+      <div class="card input-field inline">
+        <input id="searchAuthorID" type="number" class="validate">
+        <label for="email" data-error="wrong Type, must be an ID" data-success="Click Search">Author ID</label>
+      </div>
+
+      <a id='AuthorUpdateSearch' class="waves-effect waves-light btn">Search</a>
+
       <div class="row">
-        <form class="col s12">
+        <form id="submitauthor" class="col s12">
 
           <div class="row">
             <div class="input-field col s6">
@@ -59,7 +65,7 @@
             </div>
           </div>
 
-          <button class="btn waves-effect waves-light createAuthor" type="submit">Create
+          <button class="btn waves-effect waves-light" id="update-author" type="submit">Update
             <i class="material-icons right">playlist_add</i>
           </button>
 
@@ -67,9 +73,10 @@
       </div>
 
     </main>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
     <script src="../assets/JS/shared.js"></script>
-    <script src="../assets/JS/new_author.js"></script>
+    <script src="../assets/JS/edit_authors.js"></script>
+
   </body>
 </html>

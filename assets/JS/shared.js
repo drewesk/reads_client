@@ -5,7 +5,15 @@ $.ajaxSetup({
   }
 });
 
-const API_URL = (window.location.hostname == "localhost") ? `http://localhost:3000`: `https://reads-server.herokuapp.com`;
+const API_URL = (window
+  .location
+  .hostname == "localhost")
+  ? `http://localhost:3000`: `https://reads-server.herokuapp.com`;
+const queryString = window
+  .location
+  .search
+  .substring(window.location.search.length - 1, window.location.search.length);
+
 
 // $('.removebtn').click(() => {
 //   $(this).parent().hide();

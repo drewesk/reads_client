@@ -10,9 +10,6 @@
     <!-- materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 
-    <!-- materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-
   </head>
 
   <body>
@@ -25,20 +22,31 @@
             <li><a href="./index.html">Home</a></li>
             <li><a href="./books.html">Books</a></li>
             <li class="active"><a href="#">Authors</a></li>
-            <li><a href="authors/new.html">Add Author</a></li>
+            <li><a href="./authors/new.html">Add Author</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
+      <div class="card col s12">
+      Search Authors by ID:
+      <div class="card input-field inline">
+        <input id="authorID" type="number" class="validate">
+        <label for="email" data-error="wrong Type, must be an ID" data-success="Click Search">AuthorID</label>
+      </div>
+      <a id='authorSearch' class="waves-effect waves-light btn">Search</a>
+    </div>
+
     <main>
-      <section class="authors-render">
+      <section id="authorsRender" class="authors-render">
 
       </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
     <script src="./assets/JS/shared.js"></script>
     <script src="./assets/JS/authors.js"></script>
 
@@ -50,7 +58,7 @@
           <h2 class="header">{{first_name}} {{last_name}}</h2>
           <div class="card horizontal">
             <div class="card-image">
-              <img src="{{portrait_url}}" alt="Book-Stack" Height="190" width="100">
+              <img src="{{portrait_url}}" alt="author-Stack" Height="190" width="100">
             </div>
             <div class="card-stacked">
               <div class="card-content">

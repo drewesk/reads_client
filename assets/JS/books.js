@@ -13,6 +13,21 @@ $(document).ready(() => {
         console.log('deleted');
       });
     });
+
+    $('#bookSearch').click(() => {
+
+      let queryValue = $('#bookID').val();
+      location.search = 'id=' + queryValue;
+      console.log(queryString);
+    });
+
+    if(queryString) {
+      $('#booksRender').empty();
+
+      $.get(`${API_URL}/books/${queryString}`)
+        .then(addBook);
+    }
+
   });
 });
 
@@ -25,6 +40,13 @@ function addBooks (books) {
   const template = Handlebars.compile(source);
   const Books = {books};
   const HTML = template(Books);
-  // console.log(HTML);
   $('.books-render').html(HTML);
+}
+
+function addBook (book) {
+  const oneSource = $('#books-template').html();
+  const onetemplate = Handlebars.compile(oneSource);
+  const oneBook = {books: [book]};
+  const oneHTML = onetemplate(oneBook);
+  $('.books-render').html(oneHTML);
 }

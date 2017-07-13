@@ -10,9 +10,6 @@
     <!-- materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 
-    <!-- materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-
   </head>
   <body>
 
@@ -30,16 +27,28 @@
       </nav>
     </header>
 
+      <div class="card col s12">
+      Search Books by ID:
+      <div class="card input-field inline">
+        <input id="bookID" type="number" class="validate">
+        <label for="email" data-error="wrong Type, must be an ID" data-success="Click Search">BookID</label>
+      </div>
+      <a id='bookSearch' class="waves-effect waves-light btn">Search</a>
+    </div>
+
     <main>
-      <section class="books-render">
+      <section id="booksRender" class="books-render">
 
       </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
     <script src="./assets/JS/shared.js"></script>
     <script src="./assets/JS/books.js"></script>
+    <script src="./assets/JS/search_books.js"></script>
 
     <script id="books-template" type="text/x-handlebars-template">
 

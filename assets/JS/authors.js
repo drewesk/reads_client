@@ -13,6 +13,21 @@ $(document).ready(() => {
         console.log('deleted');
     	});
     });
+
+    $('#authorSearch').click(() => {
+
+      let queryValue = $('#authorID').val();
+      location.search = 'id=' + queryValue;
+      console.log(queryString);
+    });
+
+    if(queryString) {
+      $('#authorsRender').empty();
+
+      $.get(`${API_URL}/authors/${queryString}`)
+        .then(addAuthor);
+    }
+
   });
 });
 
@@ -27,4 +42,13 @@ function addAuthors (authors) {
   const HTML = template(Authors);
   // console.log(HTML);
   $('.authors-render').html(HTML);
+}
+
+function addAuthor (author) {
+  const oneSource = $('#authors-template').html();
+  const onetemplate = Handlebars.compile(oneSource);
+  const oneAuthor = {authors: [author]};
+  const authorHTML = onetemplate(oneAuthor);
+  console.log(oneSource, oneAuthor, authorHTML)
+  $('.authors-render').html(authorHTML);
 }
